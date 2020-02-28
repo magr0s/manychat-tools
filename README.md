@@ -1,1 +1,0 @@
-# ManyChat Tools (manychat-tools)
