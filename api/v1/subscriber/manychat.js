@@ -3,30 +3,30 @@ const rp = require('request-promise')
 class ManyChat {
   constructor (params) {
     const { token } = params
-    
+
     this._token = token
-  }  
-  
+  }
+
   _get (endpoint, qs) {
     const options = {
       url: `https://api.manychat.com${endpoint}`,
       json: true,
       qs,
-      
+
       headers: {
         Authorization: `Bearer ${this.token}`
       }
     }
-    
+
     return rp(options)
   }
-  
+
   prepareResponse (data) {
     const {
       profile_pic: profilePic,
       name
     } = data
-    
+
     return {
       version: 'v2',
       content: {
@@ -44,7 +44,7 @@ class ManyChat {
       }
     }
   }
-  
+
   get token () {
     return this._token
   }
