@@ -1,5 +1,5 @@
-const checkAuth = require('./checkAuth')
+const Authorization = require('./authorization')
 
 module.exports = {
-  checkAuth
+  Authorization
 }
