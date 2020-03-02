@@ -1,7 +1,7 @@
 const { SubscriberManychat } = require('../../../lib/manychat')
 const { MANYCHAT_CONFIG } = require('../../../config')
 
-const { VERSION } = MANYCHAT_CONFIG
+const { API_VERSION } = MANYCHAT_CONFIG
 
 const getInfo = async (req, res) => {
   const {
@@ -21,7 +21,7 @@ const getInfo = async (req, res) => {
     } = await subscriber.getInfo(id)
 
     return res.status(200).send({
-      version: VERSION,
+      version: API_VERSION,
       content: {
         messages: [
           {
