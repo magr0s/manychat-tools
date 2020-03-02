@@ -54,7 +54,7 @@ const getLocation = async (req, res) => {
   const subscriber = new SubscriberManychat({ token })
 
   try {
-    const { name, custom_fields: cf } = await subscriber.getInfo(id)
+    const { custom_fields: cf } = await subscriber.getInfo(id)
 
     const location = cf.find(item => (item.name === 'SCFLocation'))
     const { value: geocode } = location
@@ -69,9 +69,9 @@ const getLocation = async (req, res) => {
 
     const { address_components: addressData } = data
 
-    const { long_name: city } = addressData.find(item => (
-      item.types.includes('locality')
-    ))
+    const { long_name: city } = addressData.find(
+      ({ types }) => (types.includes('locality') || types.includes('administrative_area_level_2'))
+    )
 
     return res.status(200).send({
       version: API_VERSION,
