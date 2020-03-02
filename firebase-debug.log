@@ -1,0 +1,251 @@
+[debug] [2020-03-02T13:33:10.616Z] ----------------------------------------------------------------------
+[debug] [2020-03-02T13:33:10.618Z] Command:       /usr/bin/node /usr/bin/firebase emulators:start
+[debug] [2020-03-02T13:33:10.618Z] CLI Version:   7.12.1
+[debug] [2020-03-02T13:33:10.618Z] Platform:      linux
+[debug] [2020-03-02T13:33:10.618Z] Node Version:  v12.16.1
+[debug] [2020-03-02T13:33:10.619Z] Time:          Mon Mar 02 2020 15:33:10 GMT+0200 (GMT+02:00)
+[debug] [2020-03-02T13:33:10.619Z] ----------------------------------------------------------------------
+[debug] [2020-03-02T13:33:10.619Z] 
+[debug] [2020-03-02T13:33:10.624Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-02T13:33:10.625Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: functions
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
+[info] ✔  functions: Emulator started at http://localhost:5001
+[info] i  functions: Watching "/home/magr0s/dev/manychat-tools/functions" for Cloud Functions...
+[debug] [2020-03-02T13:33:10.987Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-02T13:33:10.987Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-02T13:33:10.987Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-02T13:33:10.988Z] [worker-~diagnostic~-5519091c-ee27-4108-9172-047ef3d6cedd]: Assigning socketPath: /tmp/fire_emu_3739.sock
+[debug] [2020-03-02T13:33:10.989Z] [worker-~diagnostic~-5519091c-ee27-4108-9172-047ef3d6cedd]: BUSY
+[debug] [2020-03-02T13:33:11.326Z] [runtime-status] [3739] Functions runtime initialized. {"cwd":"/home/magr0s/dev/manychat-tools/functions","node_version":"12.16.1"}
+[debug] [2020-03-02T13:33:11.327Z] [runtime-status] [3739] Disabled runtime features: undefined
+[debug] [2020-03-02T13:33:11.334Z] [runtime-status] [3739] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-02T13:33:11.336Z] [runtime-status] [3739] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-02T13:33:11.533Z] [runtime-status] [3739] Found google-gax at /home/magr0s/dev/manychat-tools/functions/node_modules/google-gax/build/src/index.js
+[debug] [2020-03-02T13:33:11.533Z] [runtime-status] [3739] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"},{"name":"google-gax","status":"mocked"}]
+[debug] [2020-03-02T13:33:11.578Z] [runtime-status] [3739] Checked functions.config() {"config":{}}
+[debug] [2020-03-02T13:33:11.579Z] [runtime-status] [3739] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-02T13:33:11.580Z] [runtime-status] [3739] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-02T13:33:11.580Z] [runtime-status] [3739] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-02T13:33:11.613Z] [runtime-status] [3739] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-admin/lib/index.js"}}
+[info] ✔  functions[helloWorld]: http function initialized (http://localhost:5001/manychattools/us-central1/helloWorld).
+[info] ✔  All emulators started, it is now safe to connect.
+[debug] [2020-03-02T13:33:11.855Z] [worker-~diagnostic~-5519091c-ee27-4108-9172-047ef3d6cedd]: IDLE
+[debug] [2020-03-02T13:33:29.691Z] File /home/magr0s/dev/manychat-tools/functions/index.js changed, reloading triggers
+[debug] [2020-03-02T13:33:30.692Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-03-02T13:33:30.692Z] [worker-~diagnostic~-5519091c-ee27-4108-9172-047ef3d6cedd]: FINISHING
+[debug] [2020-03-02T13:33:30.702Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-02T13:33:30.702Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-03-02T13:33:30.702Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-02T13:33:30.702Z] [worker-~diagnostic~-463a6e63-1aca-4b5e-bcae-36cecdc9ffc4]: Assigning socketPath: /tmp/fire_emu_3757.sock
+[debug] [2020-03-02T13:33:30.703Z] [worker-~diagnostic~-463a6e63-1aca-4b5e-bcae-36cecdc9ffc4]: BUSY
+[debug] [2020-03-02T13:33:30.705Z] [worker-~diagnostic~-5519091c-ee27-4108-9172-047ef3d6cedd]: exited
+[debug] [2020-03-02T13:33:30.705Z] [worker-~diagnostic~-5519091c-ee27-4108-9172-047ef3d6cedd]: FINISHED
+[debug] [2020-03-02T13:33:30.965Z] [runtime-status] [3757] Functions runtime initialized. {"cwd":"/home/magr0s/dev/manychat-tools/functions","node_version":"12.16.1"}
+[debug] [2020-03-02T13:33:30.967Z] [runtime-status] [3757] Disabled runtime features: undefined
+[debug] [2020-03-02T13:33:30.969Z] [runtime-status] [3757] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-02T13:33:30.970Z] [runtime-status] [3757] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-02T13:33:31.135Z] [runtime-status] [3757] Found google-gax at /home/magr0s/dev/manychat-tools/functions/node_modules/google-gax/build/src/index.js
+[debug] [2020-03-02T13:33:31.136Z] [runtime-status] [3757] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"},{"name":"google-gax","status":"mocked"}]
+[debug] [2020-03-02T13:33:31.180Z] [runtime-status] [3757] Checked functions.config() {"config":{}}
+[debug] [2020-03-02T13:33:31.181Z] [runtime-status] [3757] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-02T13:33:31.182Z] [runtime-status] [3757] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-02T13:33:31.183Z] [runtime-status] [3757] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-02T13:33:31.213Z] [runtime-status] [3757] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-admin/lib/index.js"}}
+[info] ✔  functions[api]: http function initialized (http://localhost:5001/manychattools/us-central1/api).
+[debug] [2020-03-02T13:33:31.434Z] [worker-~diagnostic~-463a6e63-1aca-4b5e-bcae-36cecdc9ffc4]: IDLE
+[debug] [2020-03-02T13:33:38.941Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-02T13:33:38.941Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-02T13:33:38.942Z] Accepted request GET /manychattools/us-central1/api --> api
+[debug] [2020-03-02T13:33:38.942Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-03-02T13:33:38.952Z] [worker-pool] addWorker(api)
+[debug] [2020-03-02T13:33:38.953Z] [worker-pool] Adding worker with key api, total=1
+[debug] [2020-03-02T13:33:38.953Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-02T13:33:38.953Z] [worker-api-cb5b6e4c-1f6f-4f3a-a204-c568a995feed]: Assigning socketPath: /tmp/fire_emu_3840.sock
+[debug] [2020-03-02T13:33:38.953Z] [worker-api-cb5b6e4c-1f6f-4f3a-a204-c568a995feed]: BUSY
+[debug] [2020-03-02T13:33:39.374Z] [runtime-status] [3840] Functions runtime initialized. {"cwd":"/home/magr0s/dev/manychat-tools/functions","node_version":"12.16.1"}
+[debug] [2020-03-02T13:33:39.376Z] [runtime-status] [3840] Disabled runtime features: undefined
+[debug] [2020-03-02T13:33:39.379Z] [runtime-status] [3840] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-02T13:33:39.381Z] [runtime-status] [3840] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-02T13:33:39.649Z] [runtime-status] [3840] Found google-gax at /home/magr0s/dev/manychat-tools/functions/node_modules/google-gax/build/src/index.js
+[debug] [2020-03-02T13:33:39.649Z] [runtime-status] [3840] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"},{"name":"google-gax","status":"mocked"}]
+[debug] [2020-03-02T13:33:39.713Z] [runtime-status] [3840] Checked functions.config() {"config":{}}
+[debug] [2020-03-02T13:33:39.714Z] [runtime-status] [3840] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-02T13:33:39.715Z] [runtime-status] [3840] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-02T13:33:39.715Z] [runtime-status] [3840] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-02T13:33:39.762Z] [runtime-status] [3840] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-03-02T13:33:40.020Z] [runtime-status] [3840] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-02T13:33:40.021Z] [runtime-status] [3840] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-02T13:33:40.021Z] [runtime-status] [3840] Running api in mode HTTPS
+[debug] [2020-03-02T13:33:40.031Z] [runtime-status] [3840] Attempting to listen to socketPath: /tmp/fire_emu_3840.sock
+[debug] [2020-03-02T13:33:40.034Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-02T13:33:40.053Z] [runtime-status] [3840] Ephemeral server handling GET request
+[debug] [2020-03-02T13:33:40.070Z] [runtime-status] [3840] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-02T13:33:40.076Z] [worker-api-cb5b6e4c-1f6f-4f3a-a204-c568a995feed]: IDLE
+[debug] [2020-03-02T13:33:40.077Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-02T13:33:45.618Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-02T13:33:45.619Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-02T13:33:45.619Z] Accepted request GET /manychattools/us-central1/api/v1/subscriber/getInfo --> api
+[debug] [2020-03-02T13:33:45.619Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-02T13:33:45.619Z] [worker-api-cb5b6e4c-1f6f-4f3a-a204-c568a995feed]: Assigning socketPath: /tmp/fire_emu_3840.sock
+[debug] [2020-03-02T13:33:45.619Z] [worker-api-cb5b6e4c-1f6f-4f3a-a204-c568a995feed]: BUSY
+[debug] [2020-03-02T13:33:45.620Z] [runtime-status] [3840] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-02T13:33:45.621Z] [runtime-status] [3840] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-02T13:33:45.621Z] [runtime-status] [3840] Running api in mode HTTPS
+[debug] [2020-03-02T13:33:45.622Z] [runtime-status] [3840] Attempting to listen to socketPath: /tmp/fire_emu_3840.sock
+[debug] [2020-03-02T13:33:45.624Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-02T13:33:45.628Z] [runtime-status] [3840] Ephemeral server handling GET request
+[debug] [2020-03-02T13:33:45.631Z] [runtime-status] [3840] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-02T13:33:45.632Z] [worker-api-cb5b6e4c-1f6f-4f3a-a204-c568a995feed]: IDLE
+[debug] [2020-03-02T13:33:45.632Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-02T13:33:53.519Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-02T13:33:53.519Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-02T13:33:53.520Z] Accepted request GET /manychattools/us-central1/api/v1/subscriber/get-info --> api
+[debug] [2020-03-02T13:33:53.520Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-02T13:33:53.520Z] [worker-api-cb5b6e4c-1f6f-4f3a-a204-c568a995feed]: Assigning socketPath: /tmp/fire_emu_3840.sock
+[debug] [2020-03-02T13:33:53.520Z] [worker-api-cb5b6e4c-1f6f-4f3a-a204-c568a995feed]: BUSY
+[debug] [2020-03-02T13:33:53.521Z] [runtime-status] [3840] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-02T13:33:53.522Z] [runtime-status] [3840] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-02T13:33:53.522Z] [runtime-status] [3840] Running api in mode HTTPS
+[debug] [2020-03-02T13:33:53.522Z] [runtime-status] [3840] Attempting to listen to socketPath: /tmp/fire_emu_3840.sock
+[debug] [2020-03-02T13:33:53.524Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-02T13:33:53.532Z] [runtime-status] [3840] Ephemeral server handling GET request
+[debug] [2020-03-02T13:33:53.532Z] [runtime-status] [3840] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-02T13:33:53.536Z] [worker-api-cb5b6e4c-1f6f-4f3a-a204-c568a995feed]: IDLE
+[debug] [2020-03-02T13:33:53.536Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-02T13:34:57.111Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-02T13:34:57.111Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-02T13:34:57.111Z] Accepted request GET /manychattools/us-central1/api/v1/subscriber/get-info --> api
+[debug] [2020-03-02T13:34:57.111Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-02T13:34:57.111Z] [worker-api-cb5b6e4c-1f6f-4f3a-a204-c568a995feed]: Assigning socketPath: /tmp/fire_emu_3840.sock
+[debug] [2020-03-02T13:34:57.111Z] [worker-api-cb5b6e4c-1f6f-4f3a-a204-c568a995feed]: BUSY
+[debug] [2020-03-02T13:34:57.112Z] [runtime-status] [3840] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-02T13:34:57.113Z] [runtime-status] [3840] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-02T13:34:57.113Z] [runtime-status] [3840] Running api in mode HTTPS
+[debug] [2020-03-02T13:34:57.114Z] [runtime-status] [3840] Attempting to listen to socketPath: /tmp/fire_emu_3840.sock
+[debug] [2020-03-02T13:34:57.115Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-02T13:34:57.122Z] [runtime-status] [3840] Ephemeral server handling GET request
+[debug] [2020-03-02T13:34:57.124Z] [runtime-status] [3840] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-02T13:34:57.125Z] [worker-api-cb5b6e4c-1f6f-4f3a-a204-c568a995feed]: IDLE
+[debug] [2020-03-02T13:34:57.125Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-02T13:37:38.696Z] File /home/magr0s/dev/manychat-tools/functions/src/config/index.js changed, reloading triggers
+[debug] [2020-03-02T13:37:39.697Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-03-02T13:37:39.697Z] [worker-~diagnostic~-463a6e63-1aca-4b5e-bcae-36cecdc9ffc4]: FINISHING
+[debug] [2020-03-02T13:37:39.697Z] [worker-pool] Shutting down IDLE worker (api)
+[debug] [2020-03-02T13:37:39.698Z] [worker-api-cb5b6e4c-1f6f-4f3a-a204-c568a995feed]: FINISHING
+[debug] [2020-03-02T13:37:39.708Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-02T13:37:39.708Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-03-02T13:37:39.708Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-02T13:37:39.709Z] [worker-~diagnostic~-1613aaff-4631-4a99-a861-4d5c32ce9593]: Assigning socketPath: /tmp/fire_emu_4058.sock
+[debug] [2020-03-02T13:37:39.709Z] [worker-~diagnostic~-1613aaff-4631-4a99-a861-4d5c32ce9593]: BUSY
+[debug] [2020-03-02T13:37:39.711Z] [worker-~diagnostic~-463a6e63-1aca-4b5e-bcae-36cecdc9ffc4]: exited
+[debug] [2020-03-02T13:37:39.711Z] [worker-~diagnostic~-463a6e63-1aca-4b5e-bcae-36cecdc9ffc4]: FINISHED
+[debug] [2020-03-02T13:37:39.711Z] [worker-api-cb5b6e4c-1f6f-4f3a-a204-c568a995feed]: exited
+[debug] [2020-03-02T13:37:39.711Z] [worker-api-cb5b6e4c-1f6f-4f3a-a204-c568a995feed]: FINISHED
+[debug] [2020-03-02T13:37:39.974Z] [runtime-status] [4058] Functions runtime initialized. {"cwd":"/home/magr0s/dev/manychat-tools/functions","node_version":"12.16.1"}
+[debug] [2020-03-02T13:37:39.976Z] [runtime-status] [4058] Disabled runtime features: undefined
+[debug] [2020-03-02T13:37:39.978Z] [runtime-status] [4058] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-02T13:37:39.979Z] [runtime-status] [4058] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-02T13:37:40.148Z] [runtime-status] [4058] Found google-gax at /home/magr0s/dev/manychat-tools/functions/node_modules/google-gax/build/src/index.js
+[debug] [2020-03-02T13:37:40.149Z] [runtime-status] [4058] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"},{"name":"google-gax","status":"mocked"}]
+[debug] [2020-03-02T13:37:40.188Z] [runtime-status] [4058] Checked functions.config() {"config":{}}
+[debug] [2020-03-02T13:37:40.189Z] [runtime-status] [4058] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-02T13:37:40.190Z] [runtime-status] [4058] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-02T13:37:40.190Z] [runtime-status] [4058] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-02T13:37:40.225Z] [runtime-status] [4058] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-admin/lib/index.js"}}
+[warn] ⚠  Error: Cannot find module './manychat.config.json.js'
+Require stack:
+- /home/magr0s/dev/manychat-tools/functions/src/config/index.js
+- /home/magr0s/dev/manychat-tools/functions/src/lib/manychat/manychat.js
+- /home/magr0s/dev/manychat-tools/functions/src/lib/manychat/subscriber.js
+- /home/magr0s/dev/manychat-tools/functions/src/lib/manychat/index.js
+- /home/magr0s/dev/manychat-tools/functions/src/api/v1/subscriber/controller.js
+- /home/magr0s/dev/manychat-tools/functions/src/api/v1/subscriber/routes.js
+- /home/magr0s/dev/manychat-tools/functions/src/api/v1/routes.js
+- /home/magr0s/dev/manychat-tools/functions/src/api/routes.js
+- /home/magr0s/dev/manychat-tools/functions/src/server.js
+- /home/magr0s/dev/manychat-tools/functions/index.js
+- /usr/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:982:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:864:27)
+    at Module.require (internal/modules/cjs/loader.js:1044:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (/home/magr0s/dev/manychat-tools/functions/src/config/index.js:1:25)
+    at Module._compile (internal/modules/cjs/loader.js:1158:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
+    at Module.load (internal/modules/cjs/loader.js:1002:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
+    at Module.require (internal/modules/cjs/loader.js:1044:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (/home/magr0s/dev/manychat-tools/functions/src/lib/manychat/manychat.js:2:29)
+    at Module._compile (internal/modules/cjs/loader.js:1158:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
+    at Module.load (internal/modules/cjs/loader.js:1002:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
+    at Module.require (internal/modules/cjs/loader.js:1044:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (/home/magr0s/dev/manychat-tools/functions/src/lib/manychat/subscriber.js:1:18)
+    at Module._compile (internal/modules/cjs/loader.js:1158:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
+    at Module.load (internal/modules/cjs/loader.js:1002:32)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-03-02T13:37:40.454Z] [worker-~diagnostic~-1613aaff-4631-4a99-a861-4d5c32ce9593]: exited
+[debug] [2020-03-02T13:37:40.455Z] [worker-~diagnostic~-1613aaff-4631-4a99-a861-4d5c32ce9593]: FINISHED
+[debug] [2020-03-02T13:39:43.138Z] File /home/magr0s/dev/manychat-tools/functions/src/config/index.js changed, reloading triggers
+[debug] [2020-03-02T13:39:44.139Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 0
+[debug] [2020-03-02T13:39:44.139Z] [worker-pool] Cleaned up workers for api: 1 --> 0
+[debug] [2020-03-02T13:39:44.147Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-02T13:39:44.147Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-02T13:39:44.147Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-02T13:39:44.148Z] [worker-~diagnostic~-eded5774-f244-48b7-a0ae-fdf4e1ca7578]: Assigning socketPath: /tmp/fire_emu_4083.sock
+[debug] [2020-03-02T13:39:44.148Z] [worker-~diagnostic~-eded5774-f244-48b7-a0ae-fdf4e1ca7578]: BUSY
+[debug] [2020-03-02T13:39:44.443Z] [runtime-status] [4083] Functions runtime initialized. {"cwd":"/home/magr0s/dev/manychat-tools/functions","node_version":"12.16.1"}
+[debug] [2020-03-02T13:39:44.446Z] [runtime-status] [4083] Disabled runtime features: undefined
+[debug] [2020-03-02T13:39:44.448Z] [runtime-status] [4083] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-02T13:39:44.450Z] [runtime-status] [4083] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-02T13:39:44.685Z] [runtime-status] [4083] Found google-gax at /home/magr0s/dev/manychat-tools/functions/node_modules/google-gax/build/src/index.js
+[debug] [2020-03-02T13:39:44.685Z] [runtime-status] [4083] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"},{"name":"google-gax","status":"mocked"}]
+[debug] [2020-03-02T13:39:44.728Z] [runtime-status] [4083] Checked functions.config() {"config":{}}
+[debug] [2020-03-02T13:39:44.729Z] [runtime-status] [4083] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-02T13:39:44.730Z] [runtime-status] [4083] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-02T13:39:44.730Z] [runtime-status] [4083] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-02T13:39:44.762Z] [runtime-status] [4083] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-03-02T13:39:45.070Z] [worker-~diagnostic~-eded5774-f244-48b7-a0ae-fdf4e1ca7578]: IDLE
+[debug] [2020-03-02T13:47:35.617Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-02T13:47:35.618Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-02T13:47:35.618Z] Accepted request GET /manychattools/us-central1/api/v1/subscriber/get-info --> api
+[debug] [2020-03-02T13:47:35.643Z] [worker-pool] addWorker(api)
+[debug] [2020-03-02T13:47:35.643Z] [worker-pool] Adding worker with key api, total=1
+[debug] [2020-03-02T13:47:35.643Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-02T13:47:35.644Z] [worker-api-941af314-a4e4-4791-852b-ebb57fe4a12e]: Assigning socketPath: /tmp/fire_emu_4295.sock
+[debug] [2020-03-02T13:47:35.644Z] [worker-api-941af314-a4e4-4791-852b-ebb57fe4a12e]: BUSY
+[debug] [2020-03-02T13:47:35.956Z] [runtime-status] [4295] Functions runtime initialized. {"cwd":"/home/magr0s/dev/manychat-tools/functions","node_version":"12.16.1"}
+[debug] [2020-03-02T13:47:35.959Z] [runtime-status] [4295] Disabled runtime features: undefined
+[debug] [2020-03-02T13:47:35.961Z] [runtime-status] [4295] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-02T13:47:35.963Z] [runtime-status] [4295] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-02T13:47:36.147Z] [runtime-status] [4295] Found google-gax at /home/magr0s/dev/manychat-tools/functions/node_modules/google-gax/build/src/index.js
+[debug] [2020-03-02T13:47:36.147Z] [runtime-status] [4295] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"},{"name":"google-gax","status":"mocked"}]
+[debug] [2020-03-02T13:47:36.194Z] [runtime-status] [4295] Checked functions.config() {"config":{}}
+[debug] [2020-03-02T13:47:36.195Z] [runtime-status] [4295] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-02T13:47:36.196Z] [runtime-status] [4295] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-02T13:47:36.197Z] [runtime-status] [4295] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-02T13:47:36.229Z] [runtime-status] [4295] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/magr0s/dev/manychat-tools/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-03-02T13:47:36.472Z] [runtime-status] [4295] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-02T13:47:36.472Z] [runtime-status] [4295] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-02T13:47:36.473Z] [runtime-status] [4295] Running api in mode HTTPS
+[debug] [2020-03-02T13:47:36.478Z] [runtime-status] [4295] Attempting to listen to socketPath: /tmp/fire_emu_4295.sock
+[debug] [2020-03-02T13:47:36.483Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-02T13:47:36.497Z] [runtime-status] [4295] Ephemeral server handling GET request
+[debug] [2020-03-02T13:47:36.508Z] [runtime-status] [4295] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-02T13:47:36.510Z] [worker-api-941af314-a4e4-4791-852b-ebb57fe4a12e]: IDLE
+[debug] [2020-03-02T13:47:36.510Z] [work-queue] {"queueLength":0,"workRunningCount":0}

@@ -1,31 +1,10 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
-  "name": "hello-express",
-  "version": "0.0.1",
-  "description": "A simple Node app built on Express, instantly up and running.",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "PORT=3000 nodemon server.js"
-  },
-  "dependencies": {
-    "express": "^4.17.1",
-    "request": "^2.88.2",
-    "request-promise": "^4.2.5",
-    "sharp": "^0.24.1"
-  },
-  "engines": {
-    "node": "12.x"
-  },
-  "repository": {
-    "url": "https://glitch.com/edit/#!/hello-express"
-  },
+  "name": "manychat-tools",
+  "version": "1.0.0",
+  "description": "Tools for ManyChat",
+  "main": "functions/index.js",
+  "repository": "https://github.com/magr0s/manychat-tools.git",
+  "author": "Oleksandr Krokhmalnyi <magr0s.ak@gmail.com>",
   "license": "MIT",
-  "keywords": [
-    "node",
-    "glitch",
-    "express"
-  ]
+  "private": true
 }
