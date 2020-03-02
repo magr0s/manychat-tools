@@ -1,0 +1,8 @@
+{
+  "API_URL": "https://api.manychat.com",
+  "API_VERSION": "v2",
+
+  "ENDPOINT": {
+    "SUBSCRIBER": "/fb/subscriber"
+  }
+}

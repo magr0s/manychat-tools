@@ -1,13 +1,13 @@
 const express = require('express')
 const apiV1 = require('./v1/routes')
-const { checkAuth } = require('../middleware')
+const { Authorization } = require('../middleware')
 
 const router = express.Router()
 
 router.use('/v1', [
   // middleware
-  checkAuth,
-  
+  Authorization.isAuthorized,
+
   // api
   apiV1
 ])
