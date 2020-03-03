@@ -70,6 +70,8 @@ const getLocation = async (req, res) => {
 
     const { address_components: addressData } = data
 
+    // TODO: Refactor to external request
+
     const actions = addressData.reduce((arr, { types, long_name: longName }) => {
       const obj = {}
 
