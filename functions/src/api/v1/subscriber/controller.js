@@ -79,7 +79,7 @@ const getLocation = async (req, res) => {
         messages: [
           {
             type: 'text',
-            text: `Location ${city}`
+            text: `I came from ${city}`
           }
         ],
         actions: [
