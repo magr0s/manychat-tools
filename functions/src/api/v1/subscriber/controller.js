@@ -1,5 +1,6 @@
 const rp = require('request-promise')
 const { SubscriberManychat } = require('../../../lib/manychat')
+const SignImage = require('../../../lib/signImage')
 const { MANYCHAT_CONFIG } = require('../../../config')
 
 const { API_VERSION } = MANYCHAT_CONFIG
@@ -69,26 +70,28 @@ const getLocation = async (req, res) => {
 
     const { address_components: addressData } = data
 
-    const { long_name: city } = addressData.find(
-      ({ types }) => (types.includes('locality') || types.includes('administrative_area_level_2'))
-    )
+    const actions = addressData.reduce((arr, { types, long_name: longName }) => {
+      const obj = {}
+
+      types.includes('locality') && Object.assign(obj, { key: 'SCFCity', value: longName })
+      types.includes('administrative_area_level_2') && Object.assign(obj, { key: 'SCFDistrict', value: longName })
+      types.includes('route') && Object.assign(obj, { key: 'SCFStreet', value: longName })
+      types.includes('country') && Object.assign(obj, { key: 'SCFCountry', value: longName })
+
+      Object.keys(obj).length && arr.push(obj)
+
+      return arr
+    }, [])
+      .map(({ key, value }) => ({
+        action: "set_field_value",
+        field_name: key,
+        value
+      }))
 
     return res.status(200).send({
       version: API_VERSION,
       content: {
-        messages: [
-          {
-            type: 'text',
-            text: `I came from ${city}`
-          }
-        ],
-        actions: [
-          {
-            "action": "set_field_value",
-            "field_name": "SCFLocation",
-            "value": city
-          }
-        ]
+        actions
       }
     })
   } catch (error) {
