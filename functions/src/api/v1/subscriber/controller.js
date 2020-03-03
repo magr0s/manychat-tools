@@ -1,6 +1,5 @@
 const rp = require('request-promise')
 const { SubscriberManychat } = require('../../../lib/manychat')
-const SignImage = require('../../../lib/signImage')
 const { MANYCHAT_CONFIG } = require('../../../config')
 
 const { API_VERSION } = MANYCHAT_CONFIG
