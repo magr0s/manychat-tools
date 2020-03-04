@@ -1,0 +1,4 @@
+{
+  "IMAGES_FOLDER": "./static/images",
+  "BASE_SIGNIMAGE": "./static/images/sign.template.jpeg"
+}

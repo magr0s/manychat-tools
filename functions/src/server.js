@@ -5,7 +5,8 @@ const api = require('./api/routes')
 
 const app = express()
 
-app.use(bodyParser.json())
+app.use(express.static('static'))
+  .use(bodyParser.json())
   .use(cors({ origin: true }))
   .use('/', api)
   .get('*', (_, res) => (
