@@ -1,6 +1,7 @@
 const rp = require('request-promise')
 const { SubscriberManychat } = require('../../../lib/manychat')
 const SignImage = require('../../../lib/signImage')
+
 const {
   APP_CONFIG,
   MANYCHAT_CONFIG,
@@ -9,6 +10,7 @@ const {
 
 const { APP_URL } = APP_CONFIG
 const { API_VERSION } = MANYCHAT_CONFIG
+
 const {
   IMAGES_FOLDER,
   BASE_SIGNIMAGE
@@ -129,9 +131,9 @@ const getSign = async (req, res) => {
 
     const signImage = new SignImage()
 
-    await signImage.render({
+    const imageURL = await signImage.render({
       input: BASE_SIGNIMAGE,
-      output: `${IMAGES_FOLDER}/sign.${id}.png`,
+      output: `${IMAGES_FOLDER}/sign.${id}-${Date.now()}.jpeg`,
       text: name
     })
 
@@ -141,7 +143,7 @@ const getSign = async (req, res) => {
         messages: [
           {
             type: 'image',
-            url: `${APP_URL}/images/sign.${id}.png`
+            url: imageURL
           }
         ]
       }
