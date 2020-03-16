@@ -19,15 +19,18 @@ class GiftImage {
 
       const textImage = await sharp(
         await text2png(text, {
-          color: "#111111"
+          color: "#111111",
+          font: "36px Arial_Bold",
+          localFontPath: "./static/fonts/arial-bold.ttf",
+          localFontName: "Arial_Bold",
         })
       )
         .resize({
           width: 600,
-          height: 33,
+          height: 35,
           fit: 'contain',
           gravity: 'center',
-          position: 'center',
+          position: 'right',
           background: { r: 0, b: 0, g: 0, alpha: 0 }
         })
         .toBuffer();
