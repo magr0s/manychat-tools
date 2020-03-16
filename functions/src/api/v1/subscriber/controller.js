@@ -207,10 +207,12 @@ const getGift = async (req, res) => {
 
   try {
     const {
+      name,
       profile_pic: profilePic
     } = await subscriber.getInfo(id);
 
     const giftImage = await GiftImage.render({
+      text: name,
       input: profilePic,
       output: `${IMAGES_FOLDER}/gift.${id}-${Date.now()}.jpeg`
     });
