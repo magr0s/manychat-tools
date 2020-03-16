@@ -2,6 +2,7 @@ const rp = require('request-promise')
 const { SubscriberManychat } = require('../../../lib/manychat')
 const SignImage = require('../../../lib/signImage')
 const FriendshipImage = require('../../../lib/friendshipImage')
+const GiftImage = require('../../../lib/giftImage')
 
 const {
   APP_CONFIG,
@@ -193,9 +194,48 @@ const getFriendship = async (req, res) => {
   }
 }
 
+const getGift = async (req, res) => {
+  const {
+    locals: { token }
+  } = res
+
+  const {
+    params: { id }
+  } = req
+
+  const subscriber = new SubscriberManychat({ token })
+
+  try {
+    const {
+      profile_pic: profilePic
+    } = await subscriber.getInfo(id);
+
+    const giftImage = await GiftImage.render({
+      input: profilePic,
+      output: `${IMAGES_FOLDER}/gift.${id}-${Date.now()}.jpeg`
+    });
+
+    return res.status(200).send({
+      version: 'v2',
+      content: {
+        messages: [
+          {
+            type: 'image',
+            url: giftImage
+          }
+        ]
+      }
+    })
+  } catch (error) {
+    console.log(error)
+    return res.status(500).send(error)
+  }
+}
+
 module.exports = {
   getInfo,
   getLocation,
   getSign,
-  getFriendship
+  getFriendship,
+  getGift
 }
