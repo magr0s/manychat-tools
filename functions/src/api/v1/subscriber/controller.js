@@ -179,7 +179,7 @@ const getFriendship = async (req, res) => {
 
     console.log('profile', profile)
 
-    if (profilePic) {
+    if (!profilePic) {
       throw new Error('User profile picture is empty.')
     }
 
