@@ -1,6 +1,6 @@
 {
   "name": "manychat-tools",
-  "version": "1.3.7",
+  "version": "1.3.8",
   "description": "Tools for ManyChat",
   "main": "functions/index.js",
   "repository": "https://github.com/magr0s/manychat-tools.git",
