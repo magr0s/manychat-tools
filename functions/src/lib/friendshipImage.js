@@ -3,7 +3,7 @@ const sharp = require('sharp');
 const Storage = require('./storage');
 const fs = require('fs')
 
-const { 
+const {
   APP_CONFIG: {
     FRIENDSHIPS_TEMPLATE_FOLDER
   }
