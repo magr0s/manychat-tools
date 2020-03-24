@@ -171,13 +171,9 @@ const getFriendship = async (req, res) => {
   const subscriber = new SubscriberManychat({ token })
 
   try {
-    const profile = await subscriber.getInfo(id);
-
     const {
       profile_pic: profilePic
-    } = profile
-
-    console.log('profile', profile)
+    } = await subscriber.getInfo(id);
 
     if (!profilePic) {
       throw new Error('User profile picture is empty.')
