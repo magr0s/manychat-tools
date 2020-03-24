@@ -1,9 +1,16 @@
 const rp = require('request-promise');
 const sharp = require('sharp');
 const Storage = require('./storage');
+const fs = require('fs')
+
+const { 
+  APP_CONFIG: {
+    FRIENDSHIPS_TEMPLATE_FOLDER
+  }
+} = require('../config')
 
 class FriendshipImage {
- static async render ({ input, output }) {
+ static async render ({ input, output, tpl }) {
     try {
       const requestOptions = {
         url: input,
@@ -16,10 +23,16 @@ class FriendshipImage {
         .resize(458, 498)
         .toBuffer();
 
-      const fileBlob = await sharp('./static/images/friendship.template.png')
+      const template = FRIENDSHIPS_TEMPLATE_FOLDER + `${tpl}.png`
+
+      if (!fs.existsSync(template)) {
+        throw new Error('Template not found.')
+      }
+
+      const fileBlob = await sharp(template)
         .composite([
           { input: Buffer.from(avatar) },
-          { input: './static/images/friendship.template.png'}
+          { input: template}
         ])
         .sharpen()
         .toBuffer();
@@ -29,7 +42,7 @@ class FriendshipImage {
 
       return `https://storage.googleapis.com/${bucket}/${object}`
     } catch (error) {
-      return error;
+      return Promise.reject(error)
     }
   }
 }

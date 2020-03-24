@@ -162,7 +162,10 @@ const getFriendship = async (req, res) => {
   } = res
 
   const {
-    params: { id }
+    params: { 
+      id,
+      tpl = 1
+    }
   } = req
 
   const subscriber = new SubscriberManychat({ token })
@@ -174,7 +177,8 @@ const getFriendship = async (req, res) => {
 
     const friendshipImage = await FriendshipImage.render({
       input: profilePic,
-      output: `${IMAGES_FOLDER}/friendship.${id}-${Date.now()}.jpeg`
+      output: `${IMAGES_FOLDER}/friendship.${tpl}.${id}-${Date.now()}.jpeg`,
+      tpl
     });
 
     return res.status(200).send({
@@ -188,9 +192,8 @@ const getFriendship = async (req, res) => {
         ]
       }
     })
-  } catch (error) {
-    console.log(error)
-    return res.status(500).send(error)
+  } catch ({ message }) {
+    return res.status(500).send({ error: message })
   }
 }
 
