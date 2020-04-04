@@ -3,6 +3,7 @@ const { SubscriberManychat } = require('../../../lib/manychat')
 const SignImage = require('../../../lib/signImage')
 const FriendshipImage = require('../../../lib/friendshipImage')
 const GiftImage = require('../../../lib/giftImage')
+const { TrackerRepository } = require('../../../repository')
 
 const {
   APP_CONFIG,
@@ -17,6 +18,8 @@ const {
   IMAGES_FOLDER,
   BASE_SIGNIMAGE
 } = SIGNIMAGE_CONFIG
+
+const tracker = new TrackerRepository()
 
 const getInfo = async (req, res) => {
   const {
@@ -241,10 +244,45 @@ const getGift = async (req, res) => {
   }
 }
 
+const setTracker = async (req, res) => {
+  const {
+    locals: { token }
+  } = res
+
+  const {
+    body
+  } = req
+
+  const {
+    userId,
+    campId,
+    trackerURL,
+    trackerToken
+  } = body
+
+  if (
+    !userId ||
+    !campId ||
+    !trackerURL,
+    !trackerToken
+  ) {
+    return res.status(400).send({ code: 'subscriber/bad-userId'})
+  }
+
+  try {
+    await tracker.create(body)
+
+    return res.status(200).send({ success: true })
+  } catch ({ message }) {
+    return res.status(500).send({ error: message })
+  }
+}
+
 module.exports = {
   getInfo,
   getLocation,
   getSign,
   getFriendship,
-  getGift
+  getGift,
+  setTracker
 }
