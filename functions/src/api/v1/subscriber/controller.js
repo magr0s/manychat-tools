@@ -244,7 +244,7 @@ const getGift = async (req, res) => {
   }
 }
 
-const setTracker = async (req, res) => {
+const setClickTracker = async (req, res) => {
   const {
     locals: { token }
   } = res
@@ -270,6 +270,7 @@ const setTracker = async (req, res) => {
   }
 
   try {
+    Object.assign(body, { manychatToken: token })
     await tracker.create(body)
 
     return res.status(200).send({ success: true })
@@ -284,5 +285,5 @@ module.exports = {
   getSign,
   getFriendship,
   getGift,
-  setTracker
+  setClickTracker
 }
