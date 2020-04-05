@@ -13,6 +13,7 @@
     "node": "10"
   },
   "dependencies": {
+    "binom-nodejs": "git+https://github.com/magr0s/binom-nodejs.git",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "firebase-admin": "^8.6.0",

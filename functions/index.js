@@ -6,5 +6,7 @@ const config = require(`./src/config/${process.env.GCLOUD_PROJECT}.json`)
 FirebaseAdmin.init({ config })
 
 const server = require('./src/server')
+const Scheduler = require('./src/scheduler')
 
 exports.api = functions.https.onRequest(server)
+exports.scheduler = functions.pubsub.schedule('0 */1 * * *').onRun(() => (Scheduler.run()))

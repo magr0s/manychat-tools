@@ -6,7 +6,7 @@ class Repository {
     this.path = path
   }
 
-  list (conditions) {
+  list (conditions, orderBy, limit) {
     return firestore.list(this.path, { conditions, orderBy, limit })
       .then(({ docs }) => (
         docs.map((doc) => {

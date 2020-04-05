@@ -1,5 +1,6 @@
 {
   "APP_URL": "https://us-central1-manychattools-7826f.cloudfunctions.net/",
 
-  "FRIENDSHIPS_TEMPLATE_FOLDER": "./static/images/friendships/"
+  "FRIENDSHIPS_TEMPLATE_FOLDER": "./static/images/friendships/",
+  "CKICK_TRACKER_TAGNAME": "click_lead"
 }
