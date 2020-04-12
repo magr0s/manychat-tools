@@ -9,4 +9,4 @@ const server = require('./src/server')
 const Scheduler = require('./src/scheduler')
 
 exports.api = functions.https.onRequest(server)
-exports.scheduler = functions.pubsub.schedule('0 */1 * * *').onRun(() => (Scheduler.run()))
+exports.scheduler = functions.pubsub.schedule('*/30 * * * *').onRun(() => (Scheduler.run()))

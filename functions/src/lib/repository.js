@@ -6,8 +6,8 @@ class Repository {
     this.path = path
   }
 
-  list (conditions, orderBy, limit) {
-    return firestore.list(this.path, { conditions, orderBy, limit })
+  list (params) {
+    return firestore.list(this.path, params)
       .then(({ docs }) => (
         docs.map((doc) => {
           const { id } = doc
@@ -22,7 +22,11 @@ class Repository {
   }
 
   edit (id, params) {
-    return firestore(`${this.patch}/${id}`, params)
+    return firestore.update(`${this.path}/${id}`, params)
+  }
+
+  delete (id) {
+    return firestore.delete(`${this.path}/${id}`)
   }
 }
 

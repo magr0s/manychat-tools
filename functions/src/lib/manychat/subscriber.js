@@ -15,13 +15,8 @@ class SubscriberManychat extends Manychat {
     return this._get('/getInfo', { subscriber_id: id })
   }
 
-  addTagByName (params = {}) {
-    const options = {
-      method: 'POST',
-      body: JSON.stringify(params)
-    }
-
-    return this.fetch('fb/subscriber/addTagByName', options)
+  addTagByName (params) {
+    return this._post('/addTagByName', params)
   }
 }
 

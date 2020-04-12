@@ -1,5 +1,4 @@
 const rp = require('request-promise')
-const fetch = require('node-fetch-npm')
 const { MANYCHAT_CONFIG } = require('../../config')
 
 const { API_URL } = MANYCHAT_CONFIG
@@ -30,22 +29,19 @@ class Manychat {
       .then(({ data }) => (data))
   }
 
-  fetch (endpoint, params = {}) {
-    const url = this.makeURL(endpoint)
-    const { headers } = params
+  async _post (endpoint, body) {
+    const options = {
+      uri: this.apiURL + endpoint,
+      method: 'POST',
+      json: true,
+      body,
 
-    Object.assign(headers, {
-      Authorization: `Bearer ${this.token}`
-    })
+      headers: {
+        Authorization: `Bearer ${this.token}`
+      }
+    }
 
-    Object.assign(params, { json: true })
-
-    return fetch(url, params)
-      .then(result => (result.json()))
-  }
-
-  makeURL (endpoint) {
-    return `${API_URL}/${endpoint}`
+    return rp(options)
   }
 }
 

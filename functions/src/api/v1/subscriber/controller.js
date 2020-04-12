@@ -270,11 +270,12 @@ const setClickTracker = async (req, res) => {
   }
 
   try {
-    Object.assign(body, {
+    const params = Object.assign({}, body, {
       manychatToken: token,
-      status: false
+      createdAt: new Date().getTime()
     })
-    await tracker.create(body)
+
+    await tracker.create(params)
 
     return res.status(200).send({ success: true })
   } catch ({ message }) {

@@ -25,7 +25,7 @@ class Authorization {
 
       Object.assign(res.locals, { token })
 
-      next()
+      return next()
     }
   }
 }
