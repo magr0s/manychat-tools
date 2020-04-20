@@ -8,5 +8,18 @@ FirebaseAdmin.init({ config })
 const server = require('./src/server')
 const Scheduler = require('./src/scheduler')
 
+const webhooks = require('./src/webhooks')
+
 exports.api = functions.https.onRequest(server)
+
 exports.scheduler = functions.pubsub.schedule('*/30 * * * *').onRun(() => (Scheduler.run()))
+
+const webhooksFactory = () => (
+  Object.keys(webhooks).reduce((memo, webhook) => {
+    memo[webhook] = functions.https.onRequest(webhooks[webhook])
+
+    return memo
+  }, {})
+)
+
+exports.webhooks = webhooksFactory()
