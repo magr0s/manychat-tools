@@ -1,5 +1,5 @@
-const ssa = require('./ssa')
+const postback = require('./postback')
 
 module.exports = {
-  ssa
+  postback
 }
