@@ -1,6 +1,7 @@
 const { FacebookAdsApi, AdsPixel } = require('facebook-nodejs-business-sdk')
 
 const EVENT_NAME = 'Lead'
+const PSEUDO_LENGTH = 10
 
 const postback = async ({ query }, res) => {
   const {
@@ -8,14 +9,27 @@ const postback = async ({ query }, res) => {
     token,
     time,
     ip,
-    agent
+    agent,
+    externalid
   } = query
 
   const fields = []
 
   try {
-    if (!token || token === 'Unknown') throw new Error('Token is incorrect')
-    if (!pixel || pixel === 'Unknown') throw new Error('Pixel ID incorrect')
+    if (
+      !token ||
+      token.length <= PSEUDO_LENGTH
+    ) throw new Error('Token is incorrect')
+
+    if (
+      !pixel ||
+      pixel.length <= PSEUDO_LENGTH
+    ) throw new Error('Pixel ID incorrect')
+
+    if (
+      !externalid &&
+      (!ip && !agent)
+    ) throw new Error('Bad params')
 
     const api = FacebookAdsApi.init(token, 'en_US', false)
 
@@ -23,14 +37,17 @@ const postback = async ({ query }, res) => {
 
     const eventTime = time - (3 * 3600)
 
+    const userData = {}
+
+    ip && Object.assign(userData, { client_ip_address: ip })
+    agent && Object.assign(userData, { client_user_agent: agent })
+    externalid && Object.assign(userData, { external_id: externalid })
+
     const params = {
       data: [{
         event_name: EVENT_NAME,
         event_time: eventTime,
-        user_data: {
-          client_ip_address: ip,
-          client_user_agent: agent
-        }
+        user_data: userData
       }]
     }
 
