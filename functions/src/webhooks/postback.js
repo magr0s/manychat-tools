@@ -10,7 +10,8 @@ const postback = async ({ query }, res) => {
     time,
     ip,
     agent,
-    externalid
+    externalid,
+    fbclid
   } = query
 
   const fields = []
@@ -28,7 +29,8 @@ const postback = async ({ query }, res) => {
 
     if (
       !externalid &&
-      (!ip && !agent)
+      (!ip && !agent) &&
+      !fbclid
     ) throw new Error('Bad params')
 
     const api = FacebookAdsApi.init(token, 'en_US', false)
@@ -42,6 +44,12 @@ const postback = async ({ query }, res) => {
     ip && Object.assign(userData, { client_ip_address: ip })
     agent && Object.assign(userData, { client_user_agent: agent })
     externalid && Object.assign(userData, { external_id: externalid })
+
+    if (fbclid && fbclid !== 'Unknow' && fbclid !== '-') {
+      const fbc = `fb.1.${eventTime}.${fbclid}`
+
+      Object.assign(userData, { fbc })
+    }
 
     const params = {
       data: [{
