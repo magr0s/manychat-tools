@@ -8,11 +8,15 @@ FirebaseAdmin.init({ config })
 const server = require('./src/server')
 const Scheduler = require('./src/scheduler')
 
-const { postback } = require('./src/webhooks')
+const {
+  postback,
+  actions
+} = require('./src/webhooks')
 
 exports.api = functions.https.onRequest(server)
 
 exports.scheduler = functions.pubsub.schedule('*/30 * * * *').onRun(() => (Scheduler.run()))
 
 exports.postback = functions.https.onRequest(postback)
+exports.actions = functions.https.onRequest(actions)
 
