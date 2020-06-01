@@ -5,6 +5,7 @@ const FriendshipImage = require('../../../lib/friendshipImage')
 const GiftImage = require('../../../lib/giftImage')
 const GiftImageCard = require('../../../lib/giftImageCard')
 const GiftImageCard500 = require('../../../lib/giftImageCard500')
+const GiftImageCard750 = require('../../../lib/giftImageCard750')
 const { TrackerRepository } = require('../../../repository')
 
 const {
@@ -328,7 +329,45 @@ const getGiftCard500 = async (req, res) => {
   }
 }
 
+const getGiftCard750 = async (req, res) => {
+  const {
+    locals: { token }
+  } = res
 
+  const {
+    params: { id }
+  } = req
+
+  const subscriber = new SubscriberManychat({ token })
+
+  try {
+    const {
+      name,
+      profile_pic: profilePic
+    } = await subscriber.getInfo(id);
+
+    const giftImage = await GiftImageCard750.render({
+      text: name,
+      input: profilePic,
+      output: `${IMAGES_FOLDER}/gift.${id}-${Date.now()}.jpeg`
+    });
+
+    return res.status(200).send({
+      version: 'v2',
+      content: {
+        messages: [
+          {
+            type: 'image',
+            url: giftImage
+          }
+        ]
+      }
+    })
+  } catch (error) {
+    console.log(error)
+    return res.status(500).send(error)
+  }
+}
 
 const setClickTracker = async (req, res) => {
   const {
@@ -349,7 +388,7 @@ const setClickTracker = async (req, res) => {
   if (
     !userId ||
     !campId ||
-    !trackerURL,
+    !trackerURL ||
     !trackerToken
   ) {
     return res.status(400).send({ code: 'subscriber/bad-userId'})
@@ -377,5 +416,6 @@ module.exports = {
   getGift,
   getGiftCard,
   getGiftCard500,
+  getGiftCard750,
   setClickTracker
 }
